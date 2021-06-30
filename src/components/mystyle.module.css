@@ -1,0 +1,67 @@
+.grab{
+    cursor:grab;
+}
+
+.grab:active{
+    cursor: grabbing;
+}
+
+.glow{
+    cursor: pointer;
+    animation: animate 3s linear infinite;
+}
+.stop1 {
+    background-image: linear-gradient(to right, #e0e0da, transparent);
+    width: 10%;
+}
+.stop2 {
+    background-image: linear-gradient(to left, #e0e0da , transparent);
+    width: 10%;
+}
+
+@keyframes animate{
+    0% {
+        box-shadow: 0 0 0 0 rgb(0 150 136 / 70%), 0 0 0 0 rgb(0 150 136 / 70%);
+    }
+    
+    40% {
+        box-shadow: 0 0 0 50px rgb(0 150 136 / 0%), 0 0 0 0 rgb(0 150 136 / 70%);
+    }
+    80% {
+        box-shadow: 0 0 0 50px rgb(0 150 136 / 0%), 0 0 0 30px rgb(0 150 136 / 0%);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgb(0 150 136 / 0%), 0 0 0 30px rgb(0 150 136 / 0%);
+    }
+}
+
+.bounce{
+    animation: none;
+}
+.bounce:hover{
+    animation: bounce 1s infinite;
+    color:white;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animationTimingFunction: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animationTimingFunction: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+
+.cards{
+    transform:scale(100%);
+    transition: all 200ms ease;
+    box-shadow: 0px 4px 4px #24316b;
+}
+
+.cards:hover{
+    transform:scale(105%);
+    box-shadow: 0px 4px 8px #24316b;
+}
+
